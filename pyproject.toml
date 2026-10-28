@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nessus-splitter"
+version = "0.1.0"
+description = "Split large Nessus XML exports into smaller, independently valid files"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "w0ot-net"}]
+keywords = ["nessus", "xml", "security", "reporting"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/w0ot-net/nessus_splitter"
+Repository = "https://github.com/w0ot-net/nessus_splitter"
+Issues = "https://github.com/w0ot-net/nessus_splitter/issues"
+
+[project.scripts]
+nessus-splitter = "nessus_splitter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
